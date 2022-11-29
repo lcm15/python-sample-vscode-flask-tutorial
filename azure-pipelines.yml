@@ -1,4 +1,11 @@
 # Python package
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure subscription 2(7dcd1c18-479f-4d7b-aacd-0ca320ce5b03)'
+    appType: 'webApp'
+    appName: 'https://petstore.octoperf.com/actions/Catalog.action'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 # Create and test a Python package on multiple Python versions.
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
